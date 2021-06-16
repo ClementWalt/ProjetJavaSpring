@@ -8,29 +8,30 @@ public class AddContactForm {
 
     @NotNull
     @Size(min=2, max=30)
-    private String name;
+    private String firstName;
 
     @NotNull
-    @Min(18)
-    private Integer age;
+    private String lastName;
 
-    public String getName() {
-        return this.name;
+    public String getFirstName() {
+        return this.firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setLastName(String lastName) { this.lastName = lastName; }
+
+    public void String (String lastName) {
+        this.lastName = lastName;
     }
 
     public String toString() {
-        return "Person(Name: " + this.name + ", Age: " + this.age + ")";
+        return "Contact(Prénom: " + this.firstName + ", Nom: " + this.lastName + ")";
     }
 }
