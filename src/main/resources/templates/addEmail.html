@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="#" th:action="@{/addEmail/} + ${contactID}" th:object="${adresseMailForm}" method="post">
+  <table>
+    <tr>
+      <input type="hidden" th:field="*{id}"/>
+      <td>Email de contact:</td>
+      <td><input type="text" th:field="*{email}" /></td>
+      <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</td>
+      <input type="hidden" th:field="*{contact}">
+    </tr>
+    <tr>
+      <td><button type="submit">Ajout</button></td>
+    </tr>
+
+  </table>
+</form>
+</body>
+</html>

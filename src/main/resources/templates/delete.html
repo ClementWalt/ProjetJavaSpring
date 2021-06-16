@@ -5,8 +5,17 @@
     <title>Delete</title>
 </head>
 <body>
-
-<p>Le contact a bien été supprimé</p>
-
+<h1>Liste des contacts</h1>
+<table>
+    <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+    </tr>
+    <tr th:each="contact : ${contacts}">
+        <td th:text="${contact.firstName}"></td>
+        <td th:text="${contact.lastName}"></td>
+        <td><a th:href="@{/delete/{id}(id=${contact.id})}">Supprimer</a></td>
+    </tr>
+</table>
 </body>
 </html>

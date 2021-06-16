@@ -1,10 +1,14 @@
 package com.example.accessingdatajpa;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
+
 
 @Entity
 public class Contact  implements Serializable {
@@ -14,6 +18,9 @@ public class Contact  implements Serializable {
     private Long id;
     private String firstName;
     private String lastName;
+
+    @OneToMany(mappedBy = "contact")
+    private Collection<AdresseMail> adresseMail;
 
     protected Contact() {}
 
@@ -25,12 +32,16 @@ public class Contact  implements Serializable {
     @Override
     public String toString() {
         return String.format(
-                "Customer[id=%d, firstName='%s', lastName='%s']",
-                id, firstName, lastName);
+                "Customer[id=%d, firstName='%s', lastName='%s', adresseMail = '%s']",
+                id, firstName, lastName, adresseMail);
     }
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -47,5 +58,9 @@ public class Contact  implements Serializable {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public Collection<AdresseMail> getAdresseMail() {
+        return adresseMail;
     }
 }
