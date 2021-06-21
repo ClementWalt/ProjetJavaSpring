@@ -1,8 +1,9 @@
-package com.example.accessingdatajpa;
+package com.example.Entities;
 
+
+import com.example.Entities.Contact;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name="ADRESSE_MAIL", uniqueConstraints = @UniqueConstraint(columnNames = {"email"}))

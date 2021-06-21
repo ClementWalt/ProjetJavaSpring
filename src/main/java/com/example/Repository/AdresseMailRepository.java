@@ -1,8 +1,7 @@
-package com.example.accessingdatajpa;
+package com.example.Repository;
 
+import com.example.Entities.AdresseMail;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.List;
 
 public interface AdresseMailRepository extends CrudRepository<AdresseMail, Long> {
 

@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.example.Form;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

@@ -1,6 +1,11 @@
-package com.example.accessingdatajpa;
+package com.example.controller;
 
-import org.dom4j.rule.Mode;
+import com.example.Form.adresseMailForm;
+import com.example.Form.contactForm;
+import com.example.Repository.AdresseMailRepository;
+import com.example.Repository.ContactRepository;
+import com.example.Entities.AdresseMail;
+import com.example.Entities.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

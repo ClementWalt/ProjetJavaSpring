@@ -1,4 +1,6 @@
-package com.example.accessingdatajpa;
+package com.example.Form;
+
+import com.example.Entities.Contact;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
