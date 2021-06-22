@@ -123,12 +123,17 @@ public class ContactController implements WebMvcConfigurer {
     }
 
     @PostMapping("/addEmail/{id}")
-    public RedirectView addEmailPost(@ModelAttribute AdresseMail adresseMail, @PathVariable Long id){
+    public Object addEmailPost(@ModelAttribute AdresseMail adresseMail, @PathVariable Long id){
 
-        adresseMail.setContact(contactRepository.findById(id).get());
+        if(adresseMailRepository.existsAdresseMailByEmail(adresseMail.getEmail())){
+            return "errorEmailAddress";
+        }
+        else {
+            adresseMail.setContact(contactRepository.findById(id).get());
 
-        adresseMailRepository.save(adresseMail);
+            adresseMailRepository.save(adresseMail);
 
-        return new RedirectView("/edit");
+            return new RedirectView("/edit");
+        }
     }
 }

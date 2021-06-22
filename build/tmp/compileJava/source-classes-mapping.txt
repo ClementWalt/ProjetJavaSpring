@@ -6,15 +6,15 @@ com/example/Entities/AdressePostale.java
  com.example.Entities.AdressePostale
 com/example/Repository/ContactRepository.java
  com.example.Repository.ContactRepository
-com/example/Repository/AdresseMailRepository.java
- com.example.Repository.AdresseMailRepository
+com/example/Form/adresseMailForm.java
+ com.example.Form.adresseMailForm
 com/example/Form/contactForm.java
  com.example.Form.contactForm
 com/example/Entities/Contact.java
  com.example.Entities.Contact
 com/example/Entities/AdresseMail.java
  com.example.Entities.AdresseMail
-com/example/Form/adresseMailForm.java
- com.example.Form.adresseMailForm
+com/example/Repository/AdresseMailRepository.java
+ com.example.Repository.AdresseMailRepository
 com/example/controller/ContactController.java
  com.example.controller.ContactController
