@@ -57,7 +57,7 @@ public class ContactController implements WebMvcConfigurer {
             return "form";
         }
 
-        model.addAttribute("contact",contact);
+        model.addAttribute("contact", contact);
 
         contactRepository.save(contact);
 

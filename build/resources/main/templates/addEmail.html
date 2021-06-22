@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
 <body>
 <form action="#" th:action="@{/addEmail/} + ${contactID}" th:object="${adresseMailForm}" method="post">
-  <table>
+  <table class="table">
     <tr>
       <input type="hidden" th:field="*{id}"/>
       <td>Email de contact:</td>
@@ -11,10 +14,14 @@
       <input type="hidden" th:field="*{contact}">
     </tr>
     <tr>
-      <td><button type="submit">Ajout</button></td>
+      <td><button class="btn btn-primary" type="submit">Ajout</button></td>
     </tr>
 
   </table>
 </form>
+<div align="center">
+  <a th:href="@{/edit/} + ${contactID}"><button class="btn btn-primary">Retour</button></a>
+  <a th:href="@{/}"><button class="btn btn-primary">Home</button></a>
+</div>
 </body>
 </html>
