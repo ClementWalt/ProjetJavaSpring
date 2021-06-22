@@ -28,7 +28,6 @@ public class ContactController implements WebMvcConfigurer {
     @GetMapping("/")
     public String home()
     {
-        System.out.println(contactRepository.findById(6));
         return "home";
     }
 
@@ -43,6 +42,7 @@ public class ContactController implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/result").setViewName("result");
+        registry.addViewController("/login").setViewName("login");
     }
 
     @GetMapping("/add")

@@ -22,6 +22,13 @@ public class Contact  implements Serializable {
     @OneToMany(mappedBy = "contact")
     private Collection<AdresseMail> adresseMail;
 
+    @ManyToMany
+    @JoinTable(
+            name="ADRESSE_CONTACT",
+            joinColumns=@JoinColumn(name="id_contact"),
+            inverseJoinColumns = @JoinColumn(name = "id_adresse"))
+    private Collection<AdressePostale> adresses;
+
     protected Contact() {}
 
     public Contact(String firstName, String lastName) {
@@ -33,7 +40,7 @@ public class Contact  implements Serializable {
     public String toString() {
         return String.format(
                 "Customer[id=%d, firstName='%s', lastName='%s', adresseMail = '%s']",
-                id, firstName, lastName, adresseMail);
+                id, firstName, lastName, adresseMail, adresses);
     }
 
     public Long getId() {
