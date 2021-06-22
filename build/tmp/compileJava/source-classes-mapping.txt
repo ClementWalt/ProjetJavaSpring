@@ -1,16 +1,20 @@
-com/example/accessingdatajpa/AccessingDataJpaApplication.java
- com.example.accessingdatajpa.AccessingDataJpaApplication
-com/example/accessingdatajpa/adresseMailForm.java
- com.example.accessingdatajpa.adresseMailForm
-com/example/accessingdatajpa/contactForm.java
- com.example.accessingdatajpa.contactForm
-com/example/accessingdatajpa/ContactRepository.java
- com.example.accessingdatajpa.ContactRepository
-com/example/accessingdatajpa/Contact.java
- com.example.accessingdatajpa.Contact
-com/example/accessingdatajpa/AdresseMailRepository.java
- com.example.accessingdatajpa.AdresseMailRepository
-com/example/accessingdatajpa/AdresseMail.java
- com.example.accessingdatajpa.AdresseMail
-com/example/accessingdatajpa/ContactController.java
- com.example.accessingdatajpa.ContactController
+com/example/securingweb/WebSecurityConfig.java
+ com.example.securingweb.WebSecurityConfig
+com/example/ContactApplication.java
+ com.example.ContactApplication
+com/example/Entities/AdressePostale.java
+ com.example.Entities.AdressePostale
+com/example/Repository/ContactRepository.java
+ com.example.Repository.ContactRepository
+com/example/Repository/AdresseMailRepository.java
+ com.example.Repository.AdresseMailRepository
+com/example/Form/contactForm.java
+ com.example.Form.contactForm
+com/example/Entities/Contact.java
+ com.example.Entities.Contact
+com/example/Entities/AdresseMail.java
+ com.example.Entities.AdresseMail
+com/example/Form/adresseMailForm.java
+ com.example.Form.adresseMailForm
+com/example/controller/ContactController.java
+ com.example.controller.ContactController
