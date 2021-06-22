@@ -13,6 +13,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.validation.Valid;
 
@@ -122,12 +123,12 @@ public class ContactController implements WebMvcConfigurer {
     }
 
     @PostMapping("/addEmail/{id}")
-    public String addEmailPost(@ModelAttribute AdresseMail adresseMail, @PathVariable Long id){
+    public RedirectView addEmailPost(@ModelAttribute AdresseMail adresseMail, @PathVariable Long id){
 
         adresseMail.setContact(contactRepository.findById(id).get());
 
         adresseMailRepository.save(adresseMail);
 
-        return "edit";
+        return new RedirectView("/edit");
     }
 }
