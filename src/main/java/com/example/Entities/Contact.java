@@ -19,7 +19,7 @@ public class Contact  implements Serializable {
     private String firstName;
     private String lastName;
 
-    @OneToMany(mappedBy = "contact")
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.REMOVE)
     private Collection<AdresseMail> adresseMail;
 
     @ManyToMany
